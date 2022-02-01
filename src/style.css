@@ -61,6 +61,7 @@ body {
   user-select: none;
   cursor: pointer;
   font-weight: 400;
+  border-radius: 10px;
 }
 
 .calculator > span::before {
@@ -79,9 +80,43 @@ body {
   border-top: 1px solid #0009;
 }
 
+.calculator > span:active {
+  filter: brightness(0.5);
+}
+
 .calculator > span > i {
   position: relative;
   font-style: normal;
   font-style: 1.5em;
   text-transform: uppercase;
+}
+
+.calculator > .clear {
+  grid-column: span 2;
+  width: 170px;
+  background: #f00;
+}
+
+.calculator > .clear::before {
+  background: linear-gradient(90deg, #d20000, #ffffff5c);
+  border-left: 1px solid #fff4;
+  border-bottom: 1px solid #fff4;
+  border-top: 1px solid #fff4;
+}
+
+.calculator > .plus {
+  grid-row: span 2;
+  height: 170px;
+  background: #5890daaf;
+}
+
+.calculator > .plus::before {
+  background: linear-gradient(90deg, #5890daaf, #ffffff5c);
+  border-left: 1px solid #fff4;
+  border-bottom: 1px solid #fff4;
+  border-top: 1px solid #fff4;
+}
+
+.calculator > .equality {
+  background: #413edfd0;
 }
